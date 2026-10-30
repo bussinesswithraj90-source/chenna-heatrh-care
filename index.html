@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chenna Kesava Healthcare Centre</title>
+<style>
+:root{--bg:#f2f7f6;--card:#fff;--tx:#10332f;--mu:#56706c;--pr:#0e7c72;--prt:#fff;--sf:#f2a516;--em:#d64545;--bd:#d3e2df;--soft:#e2f1ee;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b1917;--card:#132724;--tx:#e6f3f1;--mu:#93b0ab;--pr:#2bb3a5;--prt:#04211e;--bd:#24403c;--soft:#173430;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0b1917;--card:#132724;--tx:#e6f3f1;--mu:#93b0ab;--pr:#2bb3a5;--prt:#04211e;--bd:#24403c;--soft:#173430;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:30}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .5em}
+h1{font-size:clamp(2rem,5vw,3.2rem)}h2{font-size:clamp(1.5rem,3vw,2rem)}p{margin:0 0 1em}
+a{color:var(--pr)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--bd)}
+.bar{max-width:1100px;margin:auto;display:flex;align-items:center;gap:12px;padding:10px 16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tx);font-family:Georgia,serif;font-weight:700;line-height:1.1}
+.logo b{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--pr);color:var(--prt);font-size:1.3rem}
+.logo small{display:block;font:500 .72rem system-ui;color:var(--mu)}
+nav{margin-left:auto;display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav a{padding:8px 11px;border-radius:8px;text-decoration:none;color:var(--tx);font-size:.93rem}
+nav a:hover,nav a.on{background:var(--soft);color:var(--pr)}
+.menu{display:none;margin-left:auto}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 .95rem system-ui;padding:11px 20px;border-radius:10px;background:var(--pr);color:var(--prt);text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}.btn:active{transform:none}
+.btn.alt{background:transparent;color:var(--pr);border:1.5px solid var(--pr)}.btn.sf{background:var(--sf);color:#2b1c00}.btn.em{background:var(--em);color:#fff}.btn.sm{padding:7px 13px;font-size:.85rem}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--sf);outline-offset:2px}
+.ic{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:8px;padding:7px 10px;cursor:pointer;font-size:1rem}
+main{max-width:1100px;margin:auto;padding:24px 16px 56px;min-height:70vh}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding:20px 0 12px}
+.hero .lead{font-size:1.1rem;color:var(--mu);max-width:52ch}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.panel{background:var(--pr);color:var(--prt);border-radius:20px;padding:24px}
+.panel h3{margin-bottom:.3em}.panel select,.panel input{width:100%;margin:6px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:14px 0 30px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px}
+.card .e{font-size:1.8rem}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin:22px 0}.stats div{font-family:Georgia,serif;font-size:1.7rem;font-weight:700}.stats span{display:block;font:400 .85rem system-ui;color:var(--mu)}
+input,select,textarea{width:100%;padding:11px 12px;border-radius:9px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+label{display:block;font-weight:600;font-size:.9rem;margin:12px 0 4px}
+.form{max-width:560px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:9px 14px;border-radius:99px;border:1.5px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;font:inherit}
+.chip.on{background:var(--pr);color:var(--prt);border-color:var(--pr)}.chip[disabled]{opacity:.4;text-decoration:line-through;cursor:not-allowed}
+.steps{display:flex;gap:6px;margin:0 0 18px}.steps i{flex:1;height:6px;border-radius:9px;background:var(--bd)}.steps i.on{background:var(--pr)}
+.tag{display:inline-block;font-size:.78rem;padding:2px 9px;border-radius:99px;background:var(--soft);color:var(--pr)}
+.tag.x{background:#fde2e2;color:#a02020}
+.doc{display:flex;gap:14px}.av{flex:none;width:54px;height:54px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:1.6rem}
+.alert{background:var(--em);color:#fff;border-radius:16px;padding:22px;margin-bottom:20px}
+details{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 16px;margin-bottom:10px}summary{cursor:pointer;font-weight:600}
+footer{background:var(--card);border-top:1px solid var(--bd);padding:28px 16px}
+.fi{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;font-size:.92rem;color:var(--mu)}.fi a{display:block;text-decoration:none;padding:2px 0}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,120px);background:var(--tx);color:var(--bg);padding:12px 20px;border-radius:10px;transition:transform .3s;z-index:40;max-width:90vw}#toast.show{transform:translate(-50%,0)}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.menu{display:block}nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--card);padding:10px 16px;border-bottom:1px solid var(--bd);flex-direction:column;align-items:stretch}nav.open{display:flex}.bar{position:relative}.logo small{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<header><div class="bar">
+<a class="logo" href="#home"><b>✚</b><span>Chenna Kesava<small>Healthcare Centre</small></span></a>
+<button class="ic menu" id="mb" aria-label="Open menu" onclick="document.getElementById('nv').classList.toggle('open')">☰</button>
+<nav id="nv"></nav></div></header>
+<main id="app"></main>
+<footer><div class="fi">
+<div><b>Chenna Kesava Healthcare Centre</b><br>Caring for families, one appointment at a time.</div>
+<div><b>Visit</b><a href="#departments">Departments</a><a href="#doctors">Our doctors</a><a href="#services">Health packages</a></div>
+<div><b>Help</b><a href="#faq">FAQs</a><a href="#contact">Contact us</a><a href="#emergency">Emergency</a></div>
+<div><b>Hours</b>OPD: Mon–Sat, 9 AM – 5 PM<br>Emergency: 24 × 7</div></div></footer>
+<div id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s);
+const ls={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let user=ls.get('ck_user',null),appts=ls.get('ck_appts',[]),S={step:1},after=null,lm='login',q='',df='All';
+const D=[["Cardiology","❤️"],["Orthopedics","🦴"],["Pediatrics","🧒"],["Gynecology","🤰"],["Neurology","🧠"],["Dermatology","🧴"],["ENT","👂"],["General Medicine","🩺"]];
+const DR=[["Dr. Ravi Teja","Cardiology",16,700],["Dr. Meena Iyer","Cardiology",11,650],["Dr. Suresh Babu","Orthopedics",14,600],["Dr. Anitha Rao","Pediatrics",9,500],["Dr. Karthik Reddy","Pediatrics",12,500],["Dr. Lakshmi Prasad","Gynecology",18,700],["Dr. Venkat Naidu","Neurology",15,800],["Dr. Sneha Kulkarni","Dermatology",8,500],["Dr. Imran Sheikh","ENT",10,450],["Dr. Padma Latha","General Medicine",20,400],["Dr. Arjun Menon","General Medicine",7,350]];
+const PK=[["Basic health check","Blood sugar, CBC, lipid profile, ECG",999],["Senior citizen care","Heart, bone density, eye and diabetes screening",2499],["Women’s wellness","Thyroid, haemoglobin, pelvic and breast screening",1999],["Full body check-up","50+ tests with a doctor consultation",3999]];
+const T=["09:00 AM","09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","02:00 PM","02:30 PM","03:00 PM","03:30 PM","04:00 PM","04:30 PM"];
+const today=()=>new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+const taken=(d,dt,t)=>{let h=0;for(const c of d+dt+t)h=(h*31+c.charCodeAt(0))>>>0;return h%4==0||appts.some(a=>a.doc==d&&a.date==dt&&a.time==t&&a.status=='Confirmed')};
+const go=n=>{location.hash=n};
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.i);toast.i=setTimeout(()=>t.classList.remove('show'),3200)}
+function theme(){const r=document.documentElement,d=r.dataset.theme?r.dataset.theme=='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark'}
+function pick(d){S={step:2,dept:d};go('book')}
+function book(i){const d=DR[i];S={step:3,dept:d[1],doc:d[0],fee:d[3]};go('book')}
+const dateLbl=d=>new Date(d+'T00:00').toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short',year:'numeric'});
+const docCard=(d,i)=>`<div class="card doc"><div class="av">👩‍⚕️</div><div><h3 style="margin:0">${d[0]}</h3><span class="tag">${d[1]}</span><p style="margin:6px 0;color:var(--mu);font-size:.9rem">${d[2]} years’ experience · Consultation ₹${d[3]}</p><button class="btn sm" onclick="book(${i})">Book appointment</button></div></div>`;
+
+const R={
+home:()=>`<section class="hero"><div><h1>Your health, looked after by people who know your name.</h1><p class="lead">Book a doctor at Chenna Kesava Healthcare Centre in under two minutes. No queues at the counter, no phone calls on hold.</p><div class="row"><a class="btn" href="#book">Book an appointment</a><a class="btn alt" href="#doctors">Find a doctor</a><a class="btn em" href="#emergency">Emergency help</a></div>
+<div class="stats"><div>25+<span>years of service</span></div><div>60+<span>doctors</span></div><div>1,50,000+<span>patients treated</span></div></div></div>
+<div class="panel"><h3>Quick booking</h3><p style="margin-bottom:8px">Choose a department to begin.</p><select id="qd" aria-label="Department">${D.map(d=>`<option>${d[0]}</option>`).join('')}</select><button class="btn sf" style="width:100%;margin-top:8px" onclick="pick($('#qd').value)">Continue</button></div></section>
+<h2>Departments</h2><div class="grid">${D.slice(0,4).map(d=>`<div class="card"><div class="e">${d[1]}</div><h3>${d[0]}</h3><button class="btn alt sm" onclick="pick('${d[0]}')">Book now</button></div>`).join('')}</div><p><a href="#departments">See all departments</a></p>
+<h2>How booking works</h2><div class="grid"><div class="card"><h3>Pick a specialist</h3>Choose a department and a doctor that suits you.</div><div class="card"><h3>Choose a time</h3>Open slots show live; taken ones are crossed out.</div><div class="card"><h3>Get your booking ID</h3>Manage, reschedule or cancel from My appointments.</div></div>
+<h2>Health packages</h2><div class="grid">${PK.slice(0,2).map(p=>`<div class="card"><h3>${p[0]}</h3><p style="color:var(--mu)">${p[1]}</p><b>₹${p[2]}</b></div>`).join('')}</div><a class="btn alt" href="#services">View all packages</a>`,
+about:()=>`<h1>About us</h1><p class="lead" style="color:var(--mu);max-width:60ch">Chenna Kesava Healthcare Centre began as a small family clinic and grew into a multi-speciality centre with one idea: treat every patient like someone we know.</p><div class="grid"><div class="card"><h3>Our mission</h3>Honest, affordable, timely care for every family.</div><div class="card"><h3>Our approach</h3>Short waits, clear explanations, and follow-ups that actually happen.</div><div class="card"><h3>Our facilities</h3>OPD, 24-hour emergency, diagnostic lab, pharmacy and ambulance.</div></div><div class="row"><a class="btn" href="#doctors">Meet our doctors</a><a class="btn alt" href="#contact">Get in touch</a></div>`,
+departments:()=>`<h1>Departments</h1><div class="grid">${D.map(d=>`<div class="card"><div class="e">${d[1]}</div><h3>${d[0]}</h3><p style="color:var(--mu)">${DR.filter(x=>x[1]==d[0]).length} specialist(s) available</p><div class="row"><button class="btn sm" onclick="pick('${d[0]}')">Book</button><button class="btn alt sm" onclick="df='${d[0]}';go('doctors')">View doctors</button></div></div>`).join('')}</div>`,
+doctors:()=>{const l=DR.map((d,i)=>[d,i]).filter(([d])=>(df=='All'||d[1]==df)&&(d[0]+d[1]).toLowerCase().includes(q.toLowerCase()));return`<h1>Our doctors</h1><div class="row" style="margin-bottom:14px"><input id="sq" placeholder="Search by name or speciality" value="${q}" style="flex:2;min-width:200px" aria-label="Search doctors"><select id="sf" style="flex:1;min-width:160px" aria-label="Department filter"><option>All</option>${D.map(d=>`<option ${df==d[0]?'selected':''}>${d[0]}</option>`).join('')}</select></div><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">${l.map(([d,i])=>docCard(d,i)).join('')||'<p>No doctors match. Try a different search.</p>'}</div>`},
+services:()=>`<h1>Health packages</h1><div class="grid">${PK.map(p=>`<div class="card"><h3>${p[0]}</h3><p style="color:var(--mu)">${p[1]}</p><p><b style="font-size:1.3rem">₹${p[2]}</b></p><button class="btn sm" onclick="pick('General Medicine')">Book this package</button></div>`).join('')}</div><h2>Also available</h2><div class="chips">${['Diagnostic lab','Pharmacy','Ambulance','Vaccination','Physiotherapy','Online reports'].map(x=>`<span class="chip">${x}</span>`).join('')}</div>`,
+book:()=>{const st=S.step,s=`<div class="steps">${[1,2,3,4].map(n=>`<i class="${n<=st?'on':''}"></i>`).join('')}</div>`;let b='';
+if(st==1)b=`<h2>Choose a department</h2><div class="chips">${D.map(d=>`<button class="chip" onclick="S.dept='${d[0]}';S.step=2;render()">${d[1]} ${d[0]}</button>`).join('')}</div>`;
+if(st==2)b=`<h2>Choose a doctor in ${S.dept}</h2><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">${DR.map((d,i)=>[d,i]).filter(([d])=>d[1]==S.dept).map(([d,i])=>docCard(d,i)).join('')}</div><button class="btn alt sm" onclick="S.step=1;render()">Back</button>`;
+if(st==3)b=`<h2>${S.doc}: pick a date and time</h2><label for="dt">Date</label><input type="date" id="dt" min="${today()}" value="${S.date||''}" style="max-width:240px" onchange="S.date=this.value;S.time=null;render()">${S.date?`<label>Available slots</label><div class="chips">${T.map(t=>`<button class="chip ${S.time==t?'on':''}" ${taken(S.doc,S.date,t)?'disabled':''} onclick="S.time='${t}';render()">${t}</button>`).join('')}</div>`:'<p style="color:var(--mu)">Select a date to see open slots.</p>'}<div class="row" style="margin-top:18px"><button class="btn alt sm" onclick="S.step=2;S.dept=S.dept;render()">Back</button><button class="btn sm" onclick="if(!S.date||!S.time)return toast('Choose a date and a time slot first.');S.step=4;render()">Continue</button></div>`;
+if(st==4)b=`<h2>Patient details</h2><p style="color:var(--mu)">${S.doc} · ${dateLbl(S.date)} · ${S.time}</p><div class="form"><label for="pn">Full name</label><input id="pn" value="${S.name||(user?user.name:'')}"><label for="pp">Mobile number</label><input id="pp" inputmode="numeric" maxlength="10" value="${S.phone||''}"><label for="pa">Age</label><input id="pa" type="number" min="0" max="120" value="${S.age||''}"><label for="pr">Reason for visit</label><textarea id="pr" rows="3">${S.reason||''}</textarea></div><div class="row" style="margin-top:18px"><button class="btn alt sm" onclick="S.step=3;render()">Back</button><button class="btn" onclick="confirmBook()">Confirm booking</button></div>`;
+return`<h1>Book an appointment</h1>${s}${b}`},
+appointments:()=>{if(!user){after='appointments';toast('Please log in to see your appointments.');go('login');return''}const l=appts.filter(a=>a.user==user.name);return`<h1>My appointments</h1>${l.length?l.map(a=>`<div class="card" style="margin-bottom:12px"><div class="row" style="justify-content:space-between"><b>${a.doc}</b><span class="tag ${a.status=='Cancelled'?'x':''}">${a.status}</span></div><p style="margin:6px 0;color:var(--mu)">${a.dept} · ${dateLbl(a.date)} · ${a.time}<br>Booking ID: <b>${a.id}</b> · Patient: ${a.name}</p>${a.status=='Confirmed'?`<div class="row"><button class="btn alt sm" onclick="resched('${a.id}')">Reschedule</button><button class="btn em sm" onclick="cancelA('${a.id}')">Cancel</button><button class="btn alt sm" onclick="window.print()">Print</button></div>`:''}</div>`).join(''):'<div class="card"><p>You have no appointments yet.</p><a class="btn" href="#book">Book your first visit</a></div>'}`},
+emergency:()=>`<div class="alert"><h1 style="margin-bottom:.2em">Emergency? Call now.</h1><p>Our emergency desk and ambulance run 24 hours, every day. Replace the number below with the centre’s real line.</p><a class="btn sf" href="tel:+910000000000">Call +91 00000 00000</a></div><h2>While you wait</h2><div class="grid"><div class="card"><h3>Stay calm</h3>Keep the patient still and comfortable.</div><div class="card"><h3>Share details</h3>Tell us age, symptoms and any known conditions.</div><div class="card"><h3>Send location</h3>Share a landmark so the ambulance can find you.</div></div><a class="btn alt" href="#contact">Other ways to reach us</a>`,
+contact:()=>`<h1>Contact us</h1><div class="hero" style="align-items:start"><div class="form" style="max-width:none"><label for="cn">Your name</label><input id="cn"><label for="cm">Message or feedback</label><textarea id="cm" rows="5"></textarea><button class="btn" style="margin-top:14px" onclick="if(!$('#cn').value.trim()||!$('#cm').value.trim())return toast('Please add your name and a message.');toast('Thank you. We will reply soon.');go('home')">Send message</button></div><div class="card"><h3>Reception</h3><p>Chenna Kesava Healthcare Centre<br>Main Road (add your address)<br>Phone: +91 00000 00000<br>Email: care@example.com</p><a class="btn alt sm" href="#faq">Read FAQs</a></div></div>`,
+faq:()=>`<h1>Frequently asked questions</h1>${[["How do I book an appointment?","Open Book, choose a department, doctor, date and time, then confirm. You will get a booking ID."],["Can I cancel or reschedule?","Yes. Go to My appointments and use the Cancel or Reschedule buttons."],["What should I carry to the visit?","Your booking ID, a photo ID and any earlier reports or prescriptions."],["Do you handle emergencies?","Yes, 24 hours a day. Use the Emergency page or call the emergency desk."],["Is my data safe?","This demo keeps your details only in your own browser."]].map(f=>`<details><summary>${f[0]}</summary><p style="margin:8px 0 0">${f[1]}</p></details>`).join('')}<a class="btn" href="#contact">Still have a question?</a>`,
+login:()=>{if(user){return`<h1>Hello, ${user.name}</h1><div class="row"><a class="btn" href="#appointments">My appointments</a><a class="btn alt" href="#book">Book a visit</a><button class="btn em" onclick="logout()">Log out</button></div>`}return`<h1>${lm=='login'?'Log in':'Create an account'}</h1><div class="form">${lm=='login'?'':'<label for="ln">Full name</label><input id="ln">'}<label for="le">Email or mobile</label><input id="le"><label for="lp">Password</label><input id="lp" type="password"><div class="row" style="margin-top:16px"><button class="btn" onclick="auth()">${lm=='login'?'Log in':'Sign up'}</button><button class="btn alt" onclick="lm=lm=='login'?'signup':'login';render()">${lm=='login'?'New here? Sign up':'Have an account? Log in'}</button></div><p style="color:var(--mu);font-size:.85rem;margin-top:12px">Demo only: details stay in this browser.</p></div>`}
+};
+function auth(){const e=$('#le').value.trim(),p=$('#lp').value;if(!e||p.length<4)return toast('Enter your email or mobile and a password of 4+ characters.');const n=$('#ln')?$('#ln').value.trim():'';if(lm=='signup'&&!n)return toast('Please enter your name.');user={name:n||ls.get('ck_nm_'+e,e.split('@')[0])};if(n)ls.set('ck_nm_'+e,n);ls.set('ck_user',user);toast('Welcome, '+user.name+'!');const a=after||'appointments';after=null;go(a)}
+function logout(){user=null;ls.set('ck_user',null);toast('You have been logged out.');go('home')}
+function confirmBook(){const n=$('#pn').value.trim(),p=$('#pp').value.trim(),a=$('#pa').value;Object.assign(S,{name:n,phone:p,age:a,reason:$('#pr').value});if(!n)return toast('Please enter the patient’s name.');if(!/^\d{10}$/.test(p))return toast('Enter a valid 10-digit mobile number.');if(!a)return toast('Please enter the patient’s age.');if(!user){after='book';toast('Log in to confirm your booking. Your details are saved.');return go('login')}
+if(S.old){const o=appts.find(x=>x.id==S.old);if(o)o.status='Cancelled'}
+const id='CK'+Math.random().toString(36).slice(2,7).toUpperCase();appts.push({id,user:user.name,doc:S.doc,dept:S.dept,date:S.date,time:S.time,name:n,phone:p,status:'Confirmed'});ls.set('ck_appts',appts);S={step:1};toast('Booked. Your ID is '+id);go('appointments')}
+function cancelA(id){if(!confirm('Cancel this appointment?'))return;appts.find(a=>a.id==id).status='Cancelled';ls.set('ck_appts',appts);toast('Appointment cancelled.');render()}
+function resched(id){const a=appts.find(x=>x.id==id);S={step:3,dept:a.dept,doc:a.doc,name:a.name,phone:a.phone,old:id};go('book')}
+const NAV=[['home','Home'],['about','About'],['departments','Departments'],['doctors','Doctors'],['services','Packages'],['book','Book'],['appointments','My appointments'],['contact','Contact']];
+function render(){const n=location.hash.slice(1)||'home';if(!R[n]){go('home');return}
+if(n=='doctors'&&0)return;const h=R[n]();if(h===''&&n=='appointments')return;$('#app').innerHTML=h;
+$('#nv').innerHTML=NAV.map(x=>`<a href="#${x[0]}" class="${x[0]==n?'on':''}">${x[1]}</a>`).join('')+`<a href="#emergency" style="color:var(--em);font-weight:600">Emergency</a><a href="#login" class="btn sm" style="color:var(--prt)">${user?'Hi, '+user.name.split(' ')[0]:'Log in'}</a><button class="ic" onclick="theme()" aria-label="Toggle dark mode">◐</button>`;
+$('#nv').classList.remove('open');
+const sq=$('#sq');if(sq){sq.oninput=e=>{q=e.target.value;const p=e.target.selectionStart;render();const x=$('#sq');x.focus();x.setSelectionRange(p,p)};$('#sf').onchange=e=>{df=e.target.value;render()}}
+if(render.last!==n){scrollTo(0,0);render.last=n}}
+addEventListener('hashchange',render);render();
+</script></body></html>
